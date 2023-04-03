@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root {}
+
+
 *{
     margin : 0;
     padding: 0;
@@ -6,9 +11,22 @@
 body {
     background: #000;
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.cabecalho {}
+.cabecalho {
+    margin: 2% 10% 2% 10%;
+}
+
+    .cabecalho nav {
+        display: flex;
+        gap: 25px;
+    }
+
+    .cabecalho nav a {
+        text-decoration: none;
+        color: #fff;
+    }
 
 .container {
     display: flex;
@@ -28,6 +46,37 @@ body {
     flex-direction: column;
     gap: 25px;
 }
+
+    .container .conteudo h1 {
+        font-family: 'Krona One', sans-serif;
+    }    
+
+        .container .conteudo h1 span{
+            color: #22D4FD;
+        }
+    
+    .container .conteudo p {
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    .container .conteudo .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px
+    }
+
+        .container .conteudo .redes-sociais a {
+            width: 200px;
+            border: solid 1px #22D4FD;
+            padding: 8px 0px; 
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+        }
 
 .container .avatar {
     width: 50%;
