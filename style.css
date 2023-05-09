@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
 
-:root {}
+:root {
+    --primeira-cor: #454545;
+    --segunda-cor: #FF6000;
+    --terceira-cor: #FFE6C7;
+}
 
 
 *{
@@ -9,10 +13,20 @@
 }
 
 body {
-    background: #000;
-    color: #fff;
+    background: var(--primeira-cor);
+    color: var(--terceira-cor);
     font-family: 'Montserrat', sans-serif;
 }
+
+    .site {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .site .container {
+        flex-grow: 1;
+    }
 
 .cabecalho {
     margin: 2% 10% 2% 10%;
@@ -25,15 +39,14 @@ body {
 
     .cabecalho nav a {
         text-decoration: none;
-        color: #fff;
+        color: var(--terceira-cor);
     }
 
 .container {
     display: flex;
     flex-direction: row;
     /* width: 1023px */
-    margin: 10%;
-    
+    margin: 5% 10% 10% 10%;
 }
 
 /* CONTAINER */
@@ -52,7 +65,7 @@ body {
     }    
 
         .container .conteudo h1 span{
-            color: #22D4FD;
+            color: var(--segunda-cor);
         }
     
     .container .conteudo p {
@@ -69,10 +82,10 @@ body {
 
         .container .conteudo .redes-sociais a {
             width: 200px;
-            border: solid 1px #22D4FD;
+            border: solid 1px var(--segunda-cor);
             padding: 8px 0px; 
             text-align: center;
-            color: #fff;
+            color: var(--terceira-cor);
             font-weight: 600;
             text-decoration: none;
             border-radius: 8px;
@@ -86,6 +99,33 @@ body {
     align-items: center;
 }
 
+.rodape {
+    display: flex;
+    height: 80px;
+    background: var(--segunda-cor);
+    text-align: center;
+    color: var(--primeira-cor);
+    align-items: center;
+    justify-content: center;
+}
 
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .container .conteudo, 
+    .container .avatar {
+        width: 100%;
+    }
+
+    .container .conteudo .redes-sociais a {
+        width: 100%;
+    }
+
+}
 
  
